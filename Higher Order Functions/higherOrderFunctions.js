@@ -14,4 +14,9 @@ for(var i = 0; i < animals.length; i++) {
 }
 
 //higher-order funciton: filter
+var oldDogs = animals.filter(function(animal){
+    return animal.age > 10 && animal.type === 'dog';
+});
+// oldDogs will now be an array that contain only Waffles and Hank objects.
+
 
