@@ -25,22 +25,5 @@ var oldDogs = animals.filter(function(animal){
 });
 // oldDogs will now be an array that contain only Waffles and Hank objects.
 
-
-//higher-order funciton: map
-var oldDogNames = 
-animals
-  .filter(function(animal) {
-    return animal.age > 10 && animal.type === 'dog';
-  })
-  .map(function(animal) {
-    return animal.name;
-  });
-// oldDogNames will now be the array [ ‘Waffles’, ‘Hank’ ].
-
-//higher-order funciton: reduce with aarow function syntax
-var totalDogYears = animals
-.filter((x) => x.type === 'dog')
-.map   ((x) => x.age)
-.reduce((prev, cur) => { prev + cur }, 0);
-// totalDogYears will be the integer 27 (Because Waffles 12 +  
-// Spelunky 4 + Hank 11)
+console.log(dogs);
+console.log(oldDogs);
