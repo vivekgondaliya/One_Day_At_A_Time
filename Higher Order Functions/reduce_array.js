@@ -6,5 +6,13 @@ var orders = [
 ];
 
 //old school
+var totalAmount = 0;
+for(var i = 0; i < orders.length; i++){
+    totalAmount += orders[i].amount;
+}
 
-//higher-order funciton: reduce with aarow function syntax
+//higher-order funciton: reduce with arrow function syntax
+var totalOrder = orders.reduce((sum, order) => sum + order.amount, 0);
+
+console.log(totalAmount);
+console.log(totalOrder);
