@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Sorting Array - Alpahabetical</title>
+</head>
+<body>
+    <div> Original List: 
+        <div id="original"></div>
+    </div>
+    <br>
+    <div> Alphabetical Sorted List:
+        <ul id="films"></ul>
+    </div>
+    
+    <script>
+         const titles = ["A New Hope", "Attack of the Clones", "The Phantom Menace", "Revenge of the Sith", "Return of the Jedi", "The Empire Strikes Back", "The Force Awakens"];
+         const sortedTitles = [...titles];
+
+         function strip(title){
+             return title.replace(/^a |the |an /i, '').trim();
+         }
+         
+        sortedTitles.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
+         
+         //original list
+         document.querySelector('#original').innerHTML = 
+            titles.map(v => `${v}, `).join('');
+         //sorted list
+         document.querySelector('#films').innerHTML = 
+            sortedTitles.map( v => `<li>${v}</li>`).join('');  
+    </script>
+</body>
+</html>
